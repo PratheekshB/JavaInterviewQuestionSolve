@@ -7,8 +7,7 @@ import java.util.stream.Stream;
 
 public class DuplicateElement {
     public static <T> Set<T>
-    findDuplicateInStream(Stream<T> stream)
-    {
+    findDuplicateInStream(Stream<T> stream) {
         Set<T> items = new HashSet<>();
 
         return stream
@@ -16,11 +15,10 @@ public class DuplicateElement {
                 .collect(Collectors.toSet());
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         Stream<Integer> stream
-                = Stream.of(59,69,59);
+                = Stream.of(59, 69, 59);
         System.out.println(findDuplicateInStream(stream));
     }
 }
