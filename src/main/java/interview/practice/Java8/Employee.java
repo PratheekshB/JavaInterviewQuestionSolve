@@ -42,8 +42,8 @@ public class Employee {
                 .toList();
         empWithAnotherFilter1.forEach(employee -> System.out.println(employee.name));
 
-// Remove Dupliate Employee
-        System.out.println("Remoing Duplicate Emplyees are: ");
+// Remove Duplicate Employee
+        System.out.println("Removing Duplicate Employees are: ");
         List<Employee> distinctEmployee = emp.stream().distinct().toList();
         distinctEmployee.forEach(System.out::println);
 
