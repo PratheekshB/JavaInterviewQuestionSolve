@@ -8,7 +8,9 @@ public class DuplicateString {
         String str = " Hello World";
         Map<Character, Integer> frequency = new HashMap<>();
         for (char c : str.toCharArray()) {
-            frequency.put(c, frequency.getOrDefault(c, 0) + 1);
+            if (Character.isLetter(c)) {
+                frequency.put(c, frequency.getOrDefault(c, 0) + 1);
+            }
         }
         System.out.println(" Duplicate characters  are:");
         for (Map.Entry<Character, Integer> entry : frequency.entrySet()) {
