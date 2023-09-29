@@ -6,7 +6,7 @@ public static void main(String [] args){
     int max = Integer.MIN_VALUE;
     int secMax =Integer.MIN_VALUE;
 
-    for(int num :array){
+    for(int num : array){
         if(num > max){
             secMax = max;
             max = num;
@@ -17,7 +17,7 @@ public static void main(String [] args){
     if(secMax != Integer.MIN_VALUE){
         System.out.println("The Second Highest Element in the array is: "+secMax);
     }else {
-        System.out.println("No Seond Element");
+        System.out.println("No Second Highest   Element");
     }
 }
 }

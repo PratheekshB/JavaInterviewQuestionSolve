@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Employee {
     //MULTI DIMENSIONAL ARRAY
@@ -32,7 +33,7 @@ public class Employee {
         List<Employee> empWithFilter = emp.stream()
                 .filter(employee -> employee.salary > 60000 && employee.gender.equals("Female"))
                 .sorted(Comparator.comparing(employee -> employee.name))
-                .toList();
+                .collect(Collectors.toList());
         empWithFilter.forEach(employee -> System.out.println(employee.name));
 
 //Filter based on employee salary starts with number 7 and sort according to employee names in alphabetical order
