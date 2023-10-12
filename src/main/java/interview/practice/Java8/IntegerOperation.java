@@ -30,7 +30,6 @@ public class IntegerOperation {
         myList.stream()
                 .filter(n -> n % 2 == 0)
                 .forEach(System.out::println);
-
         long count = myList.size();
         System.out.println("Total Count is " + count);
 

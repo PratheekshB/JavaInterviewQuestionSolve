@@ -11,7 +11,6 @@ public class BracketValidator {
             System.out.println("Bracket is Invalid");
         }
     }
-
     public static boolean isValid(String str) {
         Stack<Character> stack = new Stack<>();
         for (char c : str.toCharArray()) {

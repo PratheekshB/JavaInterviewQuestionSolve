@@ -6,9 +6,9 @@ public class PrintCommonFactor {
         int b = 20;
         System.out.println("Common factor of " + a + " & " + b + " are:");
         int minNumber = Math.min(a, b);
-        for (int factor = 1; factor <= minNumber; factor++) {
-            if (a % factor == 0 && b % factor == 0) {
-                System.out.println(factor);
+        for (int i = 1; i <= minNumber; i++) {
+            if (a % i == 0 && b % i == 0) {
+                System.out.println(i);
             }
         }
     }

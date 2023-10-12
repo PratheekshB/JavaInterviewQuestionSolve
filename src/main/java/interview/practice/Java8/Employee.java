@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
-
 public class Employee {
     //MULTI DIMENSIONAL ARRAY
     private final String name;
@@ -29,7 +29,8 @@ public class Employee {
         );
 
 //Filter based on employee salary greater than 60000 and gender is female and sort based on employee name
-        System.out.println("Employee salary greater than 60000 are: ");
+        Logger log = Logger.getLogger(Employee.class.getName());
+        log.info("Employee salary greater than 60000 are: ");
         List<Employee> empWithFilter = emp.stream()
                 .filter(employee -> employee.salary > 60000 && employee.gender.equals("Female"))
                 .sorted(Comparator.comparing(employee -> employee.name))
@@ -37,14 +38,14 @@ public class Employee {
         empWithFilter.forEach(employee -> System.out.println(employee.name));
 
 //Filter based on employee salary starts with number 7 and sort according to employee names in alphabetical order
-        System.out.println("Employee salary starts with 7 are:");
+        log.info("Employee salary starts with 7 are:");
         List<Employee> empWithAnotherFilter1 = emp.stream().filter(employee -> String.valueOf(employee.salary).startsWith("7"))
                 .sorted(Comparator.comparing(employee -> employee.name))
                 .toList();
         empWithAnotherFilter1.forEach(employee -> System.out.println(employee.name));
 
 // Remove Duplicate Employee
-        System.out.println("Removing Duplicate Employees are: ");
+        log.info("Removing Duplicate Employees are: ");
         List<Employee> distinctEmployee = emp.stream().distinct().toList();
         distinctEmployee.forEach(System.out::println);
 
